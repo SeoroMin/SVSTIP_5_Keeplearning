@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../static/css/mypage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9279b2b68a.js"></script>
+    <!-- JS 연결 -->
+    <script src="./../static/JS/base.js" defer></script>
+    <title>연습모드</title>
+
+    <style>
+        header {
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        header .thumb {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+
+        }
+
+        header .thumb-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 36px;
+        }
+
+        header .badge {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            font-size: 12px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-weight: bold;
+            display: flex;
+            background-color: rgb(255, 252, 89);
+            align-items: center;
+            justify-content: center;
+        }
+
+        header .greet {
+            padding: 8px 22px 10px 22px;
+            font-weight: 500;
+            color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0.1);
+            display: inline-block;
+            border-radius: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.08);
+            box-sizing: border-box;
+        }
+        header h1{
+            color: rgb(255, 252, 89);
+            font-weight:700;
+
+        }
+        .list {
+            padding-left: 0;
+            margin-top: 48px;
+        }
+
+        .list .item {
+            font-weight: 500;
+            font-size: 15px;
+            color: snow;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(54, 54, 54, 0.08);
+        }
+
+        .list .item .left {
+            display: flex;
+            align-items: center;
+        }
+
+        .list .item .left .name {
+            margin-left: 6px;
+        }
+
+        .list .item .right {
+            opacity: 0.5;
+        }
+
+        .list .item i {
+            padding: 20px 22px;
+        }
+
+        .list .item .right i {
+            padding-right: 14px;
+        }
+        li:last-child {
+            flex-direction: row-reverse;
+            padding-right: 14px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- NavBar(공통) -->
+    <nav class="navbar">
+        <!-- 로고 이미지, 텍스트 -->
+        <div class="navbar_logo">
+            <i class="fas fa-user-edit"></i>
+            <a href="#">Readdie</a>
+        </div>
+        <!-- 메뉴 -->
+        <ul class="navbar_menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Page</a></li>
+            <li><a href="#">Ranking</a></li>
+            <li><a href="#">Friends</a></li>
+            <li><a href="#">Etc.</a></li>
+        </ul>
+
+        <ul class="navbar_info">
+            <!-- 로그인, 회원가입 창 만들게 되면 활성화 시킬 것
+            <li><a href="">sign up</a></li>
+            <li><a href="">sign in</a></li> -->
+
+            <!-- MY PAGE -->
+            <li><a href="#"><i class="fas fa-user-circle"></i></a></li>
+        </ul>
+
+        <a href="#" class="navbar_toggle">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+    <!-- Container(본문, 요약문 입력) -->
+    <header>
+        <div class="thumb-wrapper ">
+            <img class="thumb" src="./../static/img/KakaoTalk_20210514_135302697.jpg" alt="">
+            <div class="badge">13</div>
+        </div>
+        <div class="text-area">
+            <h1>안녕하세요, ChimChim</h1>
+            <div class="greet">
+                Done is better than perfect.
+            </div>
+        </div>
+    </header>
+
+    <ul class="list">
+        <li class="item">
+            <div class="left">
+                <i class="fas fa-user-circle"></i>
+                <div class="name">My Info</div>
+            </div>
+            <div class="right">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </li>
+
+        <li class="item">
+            <div class="left">
+                <i class="far fa-clipboard"></i>
+                <div class="name">Notice</div>
+            </div>
+            <div class="right">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </li>
+
+        <li class="item">
+            <div class="left">
+                <i class="far fa-bookmark"></i>
+                <div class="name">Bookmark</div>
+            </div>
+            <div class="right">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </li>
+
+        <li class="item">
+            <div class="left">
+                <i class="fas fa-pencil-alt"></i>
+                <div class="name">My Review</div>
+            </div>
+            <div class="right">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </li>
+
+        <li class="item">
+            <div class="left">
+                <i class="far fa-calendar-alt"></i>
+                <div class="name">Event</div>
+            </div>
+            <div class="right">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </li>
+
+        <li class="item">
+            <div class="left">
+                <i class="far fa-credit-card"></i>
+                <div class="name">Payment</div>
+            </div>
+            <div class="right">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </li>
+        <li class="item">
+            <div class="left">
+                <i class="fas fa-question"></i>
+                <div class="name">Questions</div>
+            </div>
+            <div class="right">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </li>
+        <li class="item">
+            <div class="left">
+                <i class="fas fa-sign-out-alt"></i>
+                <div class="name">Logout</div>
+            </div>
+            </div>
+        </li>
+    </ul>
+
+    </div>
+    <!-- 버튼 -->
+
+    </div>
+    </div>
+
+
+    <!-- footer는 나중에 달겠음 -->
+
+</body>
+
+</html>

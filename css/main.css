@@ -1,0 +1,389 @@
+
+/* 사용하는 색상들
+
+rgb(182, 236, 31) #연두
+rgb(133, 49, 182) #보라
+rgb(255, 242, 59) #노랑
+rgb(255, 61, 120) #핑크
+rgba(133, 49, 182, 0.5) #테두리 선(보라색) */
+
+body, html{
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 100vh;
+    font-size: 10px;
+    background: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* -------- 네비게이션 바 영역----------- */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #263343; */
+    padding: 0.8rem 1.2rem;
+    
+}
+
+.navbar_logo {
+    font-size: 2.4rem;
+    color: white;
+}
+
+.navbar_logo i {
+    color: rgb(182, 236, 31);
+}
+
+.navbar_menu {
+    font-size: 2rem;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_menu li {
+    padding: 0.8rem 1.2rem;
+}
+
+.navbar_info a {
+    font-size: 2.4rem;
+    display: flex;
+    list-style: none;
+    color: rgb(182, 236, 31);
+}
+
+.navbar_info li {
+    list-style: none;
+    padding: 0.8rem 1.2rem;
+}
+
+.navbar_toggle{
+    display: none;
+    position: absolute;
+    right: 3.2rem;
+    font-size: 2.4rem;
+    color: rgb(182, 236, 31);
+}
+
+
+/* ------ 레이아웃 설정----- */
+.mode {
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* align-items: baseline; */
+    /* flex: 1; */
+}
+.mode.item {
+    height: 30vh;
+}
+
+
+.cont2, .cont1, .cont3 {
+    width: 100%;
+
+    /* flex-basis: 100%; */
+}
+
+
+/* -------- 컨테이너 영역----------- */
+
+.container {
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    height: 100vh;
+    flex-wrap: nowrap;
+    /* vh : 부모요소와 상관 없이 높이지정하고 싶을 때 : 100vh, 부모요소를 기준으로 했을 때는 %사용*/
+    flex-direction: column;/* 중심축 설정 */
+    justify-content: space-around;/* 중심축에서 아이템 배치, 박스 사면을 빈 공간으로 두름 */
+    align-items: baseline;/* 반대축에서 아이템 배치, 텍스트를 균등하게 */
+}
+
+.cont1{
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.logo {
+    font-size: 15rem;
+    font-weight: bold;
+    font-family: 'Butterfly Kids', cursive;
+}
+
+
+
+
+.join{
+    display: flex;
+    flex-direction: column;
+    /* 문장이 가운데에 오게 */
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* -----자동 글씨 입력------ */
+
+.subtitle{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.subtitle strong {
+    font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    line-height: 50px;
+}
+
+.subtitle p {
+    color: rgba(255, 255, 239, 0.92);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin:2px;
+    padding-bottom: 2rem;
+}
+
+.btn {
+
+    width: 20rem;
+    height: 4.5rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgb(133, 49, 182);
+    margin-top: 1rem;
+    box-shadow: 0.2rem 0.2rem 3rem rgba(0, 0, 0, 0.2);
+
+}
+
+.btn:hover{
+    color: rgb(255, 61, 120);
+    background-color: rgb(255, 242, 59);
+    transition: all ease 0.3s;
+}
+
+.subtitle strong span {
+    color: rgb(255, 242, 59);
+}
+
+
+/* =========배틀 모드========== */
+
+
+.bttn {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2.8px;
+    background-color: rgb(133, 49, 182);
+    padding: 40px 50px;
+    border-radius: 2rem;
+    box-shadow: 1px 2.9px 16px rgba(130, 27, 249, 0.4);
+    transition: 0.6s cubic-bezier(0.01, 1.69, 0.99, 0.94);
+  }
+  .bttn:hover {
+    box-shadow: 3px 4.9px 16px rgba(211, 173, 255, 0.6);
+    letter-spacing: 5px;
+  }
+  .bttn--clicked {
+    transition: 0.6s cubic-bezier(0.01, 1.69, 0.99, 0.94);
+    padding: 15px 2px;
+    width: 50px;
+    color: transparent;
+    z-index: -10;
+  }
+  
+  .color {
+    display: block;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    transition: 0.8s ease;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+  
+  .expanded {
+    width: 200%;
+    padding-bottom: 200%;
+    height: auto;
+  }
+  
+  .color--blue {
+    background-color: #530085;
+    transition-delay: 0.25s;
+  }
+  
+  .color--orange {
+    background-color: #ff77a7;
+    transition-delay: 0.5s;
+  }
+  
+  .color--green {
+    background-color: #ffff73;
+    transition-delay: 0.75s;
+  }
+  
+  .color--white {
+    background-color: rgb(211, 173, 255);
+    transition-delay: 1s;
+  }
+/* =============연습 모드================== */
+
+
+.bttn2 {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2.8px;
+    background-color: rgb(255, 61, 120);
+    padding: 40px 50px;
+    border-radius: 2rem;
+    box-shadow: 1px 2.9px 16px rgba(255, 255, 255, 0.4);
+    transition: 0.6s cubic-bezier(0.01, 1.69, 0.99, 0.94);
+  }
+  .bttn2:hover {
+    box-shadow: 3px 4.9px 16px rgba(255, 251, 190, 0.8);
+    letter-spacing: 5px;
+  }
+
+
+
+
+/* .item {
+    
+    레이아웃 수정할 때 사용하는 경계선 용도
+    border: 1px solid rgba(133, 49, 182, 0.5);
+
+} */
+
+
+
+
+/* =========================================== */
+
+
+
+/* -------------------- Tablet ---------------- */
+@media screen and (max-width : 786px) {
+
+
+    /* Navbar */
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.8rem 2.4rem;
+    }
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .navbar_menu li {
+        width: 100%;
+        text-align: center;
+    }
+    .navbar_menu li:hover{
+    background-color: rgb(133, 49, 182);
+    border-radius: 0.4rem;
+    }
+    .navbar_info {
+        display: none;
+        width: 100%;
+        padding-left: 0;
+        justify-content: center;
+    }
+    .navbar_toggle {
+        display: block;
+    }
+
+    .navbar_menu.active,
+    .navbar_info.active {
+        display: flex;
+    }
+
+    .subtitle strong {
+        font-size: 2rem;
+        line-height: 4rem;
+        padding: 0px 10px;
+    }
+
+    .subtitle p{
+        font-size: 1rem;
+    }
+
+    .btn{
+        width: 180px;
+        height: 4.4rem;
+    }
+
+
+
+    
+
+}
+
+/* -------------------- Mobile ---------------- */
+@media screen and (max-width : 500px) {
+
+    /* Container */
+
+    .container{
+        display: flex;
+        /* background: #fffae0; */
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        align-content: center;
+    }
+    .cont1, .cont2 {
+        width: 100%;
+        /* background: #fffae0; */
+
+    }
+    .navbar {
+        position: sticky;
+  top: 0;
+  opacity: 1;
+  backdrop-filter: blur(3rem);
+    }
+    .item4 {
+        height: 80vh;
+    }
+}

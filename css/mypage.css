@@ -1,0 +1,277 @@
+
+body, html{
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 100vh;
+    font-size: 10px;
+    background: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* -------- 네비게이션 바 영역----------- */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #263343; */
+    padding: 0.8rem 1.2rem;
+    
+}
+
+.navbar_logo {
+    font-size: 2.4rem;
+    color: white;
+}
+
+.navbar_logo i {
+    color: rgb(182, 236, 31);
+}
+
+.navbar_menu {
+    font-size: 2rem;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_menu li {
+    padding: 0.8rem 1.2rem;
+}
+
+.navbar_info a {
+    font-size: 2.4rem;
+    display: flex;
+    list-style: none;
+    color: rgb(182, 236, 31);
+}
+
+.navbar_info li {
+    list-style: none;
+    padding: 0.8rem 1.2rem;
+}
+
+.navbar_toggle{
+    display: none;
+    position: absolute;
+    right: 3.2rem;
+    font-size: 2.4rem;
+    color: rgb(182, 236, 31);
+}
+
+
+/* -------- 컨테이너 영역----------- */
+
+.container {
+    display: flex;
+    height: 100vh;
+    /* vh : 부모요소와 상관 없이 높이지정하고 싶을 때 : 100vh, 부모요소를 기준으로 했을 때는 %사용*/
+    flex-direction: row;/* 중심축 설정 */
+    justify-content: space-around;/* 중심축에서 아이템 배치, 박스 사면을 빈 공간으로 두름 */
+    align-items: baseline;/* 반대축에서 아이템 배치, 텍스트를 균등하게 */
+}
+
+.cont1 {
+    flex-basis: 65%;
+    /* background-color: rgb(255, 241, 180); */
+    
+}
+.cont2 {
+    flex-basis: 35%;
+}
+.item {
+    /* 
+    레이아웃 수정할 때 사용하는 경계선 용도 */
+    border: 1px solid rgba(133, 49, 182, 0.5);
+}
+
+/* 본문 관련 제목 */
+.item0 {
+    font-size: 2rem;
+    height: 5vh;
+    margin: 2rem;
+    font-weight: bolder;
+}
+
+/* -------- 본문 영역----------- */
+
+.item1 {
+    background: rgb(245, 242, 230);
+    height: 55vh;
+    margin: 2rem;
+    font-size: 1.7rem;
+    margin-bottom: 0;
+    overflow:auto;
+}
+
+/* 작가, 작품명 */
+
+.item2 {
+    flex-basis: 90%;
+    background: rgb(245, 242, 230);
+    font-size: 1.7rem;
+    height: 5vh;
+    margin: 2rem;
+    margin-top: 0;
+    padding-right: 5vw;
+    text-align: right;
+}
+/* 요약(제목) */
+.item3 {
+    font-size: 2rem;
+    height: 5vh;
+    margin: 2rem 5vw 2rem 5vw;
+    font-weight: bolder;
+}
+/* -------- 입력창 영역----------- */
+.item4 {
+    
+    height: 40vh;
+    font-size: 1.7rem;
+    margin: 2rem 5vw 1rem 5vw;
+    
+}
+textarea{
+    background: rgb(211, 207, 207);
+    border: unset;
+    font-size: 1.3rem;
+    width: 100%;
+    height: 100%;
+}
+
+
+.item4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+
+}
+.sub {
+    flex-basis: 30%;
+}
+@keyframes gradient {
+    0% {
+      background: radial-gradient(circle at center, rgba( 255, 125 , 125, 0 ) 0%, #fff 0%, #fff 100%);
+    }
+    25% {
+      background: radial-gradient(circle at center, rgba( 255, 125, 125, 0.3 ) 24%, #fff 25%, #fff 100%);
+    }
+    50% {
+      background: radial-gradient(circle at center, rgba( 255, 125, 125, 0.5 ) 49%, #fff 50%, #fff 100%);
+    }
+    75% {
+      background: radial-gradient(circle at center, rgba( 255, 125, 125, 0.8 ) 74%, #fff 75%, #fff 100%);
+    }
+    100% {
+      color: #fff;
+      background: radial-gradient(circle at center, #f88 99%, #fff 100%, #fff 100%);
+    }
+    }
+    
+.item5 button {
+    /* margin-top: 30px;/ */
+    width: 100%;
+    height: 5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #666;
+    box-shadow: 0 6px 6px rgb(176, 205, 248);
+    outline: none;
+    }
+
+.item5 button:active {
+    animation: gradient 50ms;
+    background: #f88;
+    color: #fff;
+    box-shadow: none;
+    }
+    
+
+
+/* -------------------- Tablet ---------------- */
+@media screen and (max-width : 786px) {
+
+
+    /* Navbar */
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.8rem 2.4rem;
+    }
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .navbar_menu li {
+        width: 100%;
+        text-align: center;
+    }
+    .navbar_menu li:hover{
+    background-color: rgb(133, 49, 182);
+    border-radius: 0.4rem;
+    }
+    .navbar_info {
+        display: none;
+        width: 100%;
+        padding-left: 0;
+        justify-content: center;
+    }
+    .navbar_toggle {
+        display: block;
+    }
+
+    .navbar_menu.active,
+    .navbar_info.active {
+        display: flex;
+    }
+
+
+    
+
+}
+
+/* -------------------- Mobile ---------------- */
+@media screen and (max-width : 500px) {
+
+    /* Container */
+
+    .container{
+        display: flex;
+        /* background: #fffae0; */
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        align-content: center;
+    }
+    .cont1, .cont2 {
+        width: 100%;
+        /* background: #fffae0; */
+
+    }
+    .navbar {
+        position: sticky;
+  top: 0;
+  opacity: 1;
+  backdrop-filter: blur(3rem);
+    }
+    .item4 {
+        height: 80vh;
+    }
+}

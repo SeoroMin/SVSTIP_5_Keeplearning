@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../static/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9279b2b68a.js"></script>
+    <!-- JS 연결 -->
+    <script src="./../static/JS/base.js" defer></script>
+    <title>Readdie</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <!-- NavBar(공통) -->
+    <nav class="navbar">
+        <!-- 로고 이미지, 텍스트 -->
+        <div class="navbar_logo" style="visibility: hidden;">
+            <i class="fas fa-user-edit"></i>
+            <a href="#">Readdie</a>
+        </div>
+        <!-- 메뉴 -->
+        <ul class="navbar_menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Page</a></li>
+            <li><a href="#">Ranking</a></li>
+            <li><a href="#">Friends</a></li>
+            <li><a href="#">Etc.</a></li>
+        </ul>
+
+        <ul class="navbar_info">
+            <!-- 로그인, 회원가입 창 만들게 되면 활성화 시킬 것
+            <li><a href="">sign up</a></li>
+            <li><a href="">sign in</a></li> -->
+
+            <!-- MY PAGE -->
+            <li><a href="#"><i class="fas fa-user-circle"></i></a></li>
+        </ul>
+
+        <a href="#" class="navbar_toggle">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+
+
+    <!-- ------------------------------------------------------------------------=================------------ -->
+
+
+
+
+
+
+
+
+    <!-- Container(루트 컨테이너 flex 사용) -->
+    <div class="container">
+
+        <!-- 로고 영역 -->
+        <div class="cont1 item">
+            <div class="logo">Readdie</div>
+        </div>
+        <!-- 소제목 컨테이너 -->
+        <div class="cont2 item join">
+            <div class="subtitle">
+                <strong>Read Words, <span class="type"></span></strong>
+                <p>Not only children and teenagers, <br>but also people in their 20s and 30s do not read a lot of books,
+                    <br>resulting in poor reading comprehension.<br>In order to improve this reading comprehension,
+                    <br>we wanted to create a mission-style application that provided several articles every day.</p>
+                <!-- login & sign up btn -->
+                <a href="#" class="btn">How to Play</a>
+            </div>
+            <!-- 모드 선택 영역-->
+            <div class="cont3 item mode">
+                <!-- 배틀 모드 -->
+                <div class="battle_mode item">
+                    <a class="bttn" href="" title=""> Battle </a>
+                    <span class="color color--blue" data-value="1"></span>
+                    <span class="color color--orange" data-value="1"></span>
+                    <span class="color color--green" data-value="1"></span>
+                    <span class="color color--white" data-value="1"></span>
+                </div>
+                <!-- 연습 모드 -->
+                <div class="prac_mode item"><a class="bttn2" href="" title="">Practice</a></div>
+            </div>
+            <!-- 하단 메뉴 영역 -->
+
+        </div>
+
+
+
+
+    </div>
+    
+
+    </div>
+    </div>
+
+
+    <!-- type.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+        var typed = new Typed('.type', {
+            // Waits 1000ms after typing "First"
+            strings: ['Lead to improved grade', 'Lead a better life', 'Lead the World!'],
+            typeSpeed: 80,
+            backSpeed: 70,
+            loop: true,
+        });
+
+    </script>
+
+    <script>
+        const button = document.querySelector('.bttn');
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            button.classList.add('bttn--clicked');
+            document.querySelectorAll('span').forEach((element) => { element.classList.add('expanded') })
+
+
+
+
+            /* 
+        ---------------------------------------
+        just to reset without having to refresh..
+         --------------------------------*/
+            setTimeout(() => { button.classList.remove("bttn--clicked") }, 3500);
+            setTimeout(() => { document.querySelectorAll('span').forEach((element) => { element.classList.remove('expanded') }) }, 1700)
+        });
+    </script>
+
+</body>
+
+</html>

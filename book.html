@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../static/css/book.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9279b2b68a.js"></script>
+    <!-- JS 연결 -->
+    <script src="./../static/JS/base.js" defer></script>
+    <title>연습모드</title>
+    <style>
+        .corners {
+            background: rgb(255, 255, 245);
+            height: auto;
+            margin: 100px auto;
+            max-width: 340px;
+            padding: 20px 50px;
+            position: relative;
+            box-shadow: 0 1px 7px hsla(0, 0%, 0%, 0.2);
+        }
+    
+        /* Corner Effect */
+        .corners:after,
+        .corners:before {
+            background: #ffe4f994;
+            content: '';
+            height: 50px;
+            position: absolute;
+            top: -25px;
+            width: 100px;
+            box-shadow: 0 5px 10px -7px hsla(0, 0%, 0%, 0.5);
+        }
+    
+        .corners:after {
+            left: -50px;
+            transform: rotate(-45deg);
+        }
+    
+        .corners:before {
+            right: -50px;
+            transform: rotate(45deg);
+        }
+        strong{
+            color: rgb(255, 242, 59);
+        }
+        /* ========= 버튼 ========== */
+
+        .btn {
+
+width: 20rem;
+height: 4.5rem;
+border-radius: 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+background-color: rgb(133, 49, 182);
+margin-top: 1rem;
+box-shadow: 0.2rem 0.2rem 3rem rgba(0, 0, 0, 0.2);
+
+}
+
+.btn:hover{
+color: rgb(255, 61, 120);
+background-color: rgb(255, 242, 59);
+transition: all ease 0.3s;
+}
+    </style>
+</head>
+
+<body>
+    <!-- NavBar(공통) -->
+    <nav class="navbar">
+        <!-- 로고 이미지, 텍스트 -->
+        <div class="navbar_logo">
+            <i class="fas fa-user-edit"></i>
+            <a href="#">Readdie</a>
+        </div>
+        <!-- 메뉴 -->
+        <ul class="navbar_menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Page</a></li>
+            <li><a href="#">Ranking</a></li>
+            <li><a href="#">Friends</a></li>
+            <li><a href="#">Etc.</a></li>
+        </ul>
+
+        <ul class="navbar_info">
+            <!-- 로그인, 회원가입 창 만들게 되면 활성화 시킬 것
+            <li><a href="">sign up</a></li>
+            <li><a href="">sign in</a></li> -->
+
+            <!-- MY PAGE -->
+            <li><a href="#"><i class="fas fa-user-circle"></i></a></li>
+        </ul>
+
+        <a href="#" class="navbar_toggle">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+
+    <!-- Container(본문, 요약문 입력) -->
+
+    <div class="container ">
+        <div class="cont1" style="width: 90%;">
+            <!-- 본문 관련 박스Read the text and summarize it. -->
+            <!-- <h2>주어진 <strong>본문을 읽고 요약</strong>해보세요</h2> -->
+            <div class="item item0"><h3><strong>Read</strong> the text and <strong>summarize</strong> it.</h3></div>
+
+            <div class="corners">
+                <h4>Life is amazing </h4>
+                 “This life is what you make it. No matter what, you're going to mess up sometimes, it's a universal truth. But the good part is you get to decide how you're going to mess it up. 
+                
+              Girls will be your friends - they'll act like it anyway. But just remember, some come, some go. The ones that stay with you through everything - they're your true best friends. Don't let go of them. 
+               <br>
+                <br>
+              Also remember, sisters make the best friends in the world. As for lovers, well, they'll come and go too. And baby, I hate to say it, most of them - actually pretty much all of them are going to break your heart, but you can't give up because if you give up, you'll never find your soulmate. 
+                <br>
+                <br>
+               You'll never find that half who makes you whole and that goes for everything. Just because you fail once, doesn't mean you're gonna fail at everything. Keep trying, hold on, and always, always, always believe in yourself, because if you don't, then who will, sweetie? So keep your head high, keep your chin up, and most importantly, keep smiling, because life's a beautiful thing and there's so much to smile about.” <br>
+               <!-- 작품 -->
+               <div class="item" style="float:right;">IU, "Unlucky"</div>
+              </div>
+        </div>
+        <!-- 요약문 관련 박스 -->
+        <div class="cont2">
+            <div class="item item3"><h3><strong>Let's summarize</strong></h3></div>
+            <!-- 임시로 요약문 내용을 결과 페이지에 넘겼음 -->
+            <div class="item item4">
+                <form action="/result" method="post">
+                    <div class="corners">
+                        
+                    <textarea name="summary_text" rows="20" placeholder="요약한 내용 입력" style="font-size: medium; font-weight: bold;"></textarea>
+<h5 style="color:rgba(226, 200, 226, 0.938);"><i>"Learn as much by writing as by reading."<br><span style="float: right;">- Lord Acton -</span></i></h4>
+            </div>
+            <!-- 버튼 -->
+            <div class="item item5">
+                
+                <button type="submit"class="btn"> Upload Summary </button>
+            </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+
+</html>

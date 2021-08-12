@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/final-friend.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9279b2b68a.js"></script>
+    <!-- JS 연결 -->
+    <script src="./js/base.js" defer></script>
+    <!-- <script src="./js/final-friend.js"></script> -->
+    <title>결과페이지</title>
+    <style>
+        html {
+            font-size: 62.5%;
+
+        }
+
+        .container {
+            overflow: scroll;
+
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+
+            /* padding-top: 1rem; */
+        }
+
+        .item {
+            display: flex;
+            width: 100%;
+            /* border: 1px solid yellow; */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item1 {
+            align-items: center;
+            height: 10vh;
+            /* background-color: rgba(67, 34, 70, 0.514); */
+            /* visibility: hidden; */
+           
+        }
+
+
+
+        .item2 {
+            height: 10vh;
+            padding-bottom: 40px;
+            font-size: 4em;
+            color: #ffc;
+            animation: glowing 1s infinite;
+        }
+
+        .item3 {
+            height: 25vh;
+            display: flex;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item4 {
+
+            /* padding-top: 3rem; */
+            /* overflow: scroll; */
+
+
+            width: 100%;
+            margin: 0 5%;
+            /* padding-left: 0; */
+
+            /* height: 80%; */
+            display: flex;
+            flex-direction: column;
+            /* flex-wrap: wrap; */
+            /* justify-content: center; */
+            /* align-items: center; */
+
+        }
+
+        .item4:first-child {
+            padding-top: 45%;
+        }
+
+        .list {
+            padding-left: 0;
+            width: 90%;
+            margin: 0 5%;
+            list-style: none;
+            align-items: center;
+            /* justify-content: center; */
+            margin-top: 10%;
+        }
+
+        /* .list li {
+
+            border: 1px solid blue;
+        } */
+
+        .qna {
+            margin-left: 0;
+            margin-top: 5%;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .btn {
+
+            width: 20rem;
+            height: 4.5rem;
+            border-radius: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: rgb(133, 49, 182);
+            margin-top: 1rem;
+            box-shadow: 0.2rem 0.2rem 3rem rgba(0, 0, 0, 0.2);
+
+        }
+
+        .btn:hover {
+            color: rgb(255, 61, 120);
+            background-color: rgb(255, 242, 59);
+            transition: all ease 0.3s;
+        }
+        .score {
+            color: rgb(255, 242, 59);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+
+        /* badge */
+
+        .btns{
+            display: flex;;
+            flex-direction: row;
+            justify-content: flex-start;
+
+        }
+        .badge {
+            /* margin-right: 10px; */
+            width: 80px;
+            height: 28px;
+            border-radius: 5%;
+            font-size: 12px;
+            padding-right: 10px;
+            /* position: absolute;
+            top: 0;
+            right: 0; */
+            font-weight: bold;
+            display: flex;
+            background-color: rgb(254, 255, 174);
+            border: 2px solid rgba(254, 255, 174, 0.795);
+            align-items: center;
+            justify-content: center;
+            /* z-index: 99; */
+        }
+
+
+        .notifications__item__content{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: baseline; */
+        }
+
+        /* ====================QnA============== */
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- NavBar(공통) -->
+    <nav class="navbar">
+        <!-- 로고 이미지, 텍스트 -->
+        <div class="navbar_logo">
+            <i class="fas fa-user-edit"></i>
+            <a href="#">Readdie</a>
+        </div>
+        <!-- 메뉴 -->
+        <ul class="navbar_menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Page</a></li>
+            <li><a href="#">Ranking</a></li>
+            <li><a href="#">Friends</a></li>
+            <li><a href="#">Etc.</a></li>
+        </ul>
+
+        <ul class="navbar_info">
+            <!-- 로그인, 회원가입 창 만들게 되면 활성화 시킬 것
+            <li><a href="">sign up</a></li>
+            <li><a href="">sign in</a></li> -->
+            <!-- MY PAGE -->
+            <li><a href="#"><i class="fas fa-user-circle"></i></a></li>
+        </ul>
+
+        <a href="#" class="navbar_toggle">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+
+    <!------------------- container부분 ------------------->
+
+    <!-- div.container>div.item$/$}*5 -->
+    
+    
+    <div class="container">
+        <!-- <div class="item item1"> -->
+            <div class="item item1 search-bar">
+                
+                <input type="text" class="ip-search" placeholder="Search" />
+              </div>
+        <!-- </div> -->
+
+        <div class=" item wrapper">
+
+            <div class="notifications">
+          
+              <div class="notifications__item">
+                <div class="notifications__item__avatar">
+                  <img src="./image/char1.png" />
+                  
+                </div>
+          
+                <div class="notifications__item__content">
+                  <div class="badge">13 | LV . 99</div>
+                  <span class="notifications__item__title">Ganadala12maba</span>
+                  <span class="notifications__item__message">Mint-Choco</span>
+                  
+                </div>
+          <!-- ===================== -->
+                <div>
+                  <div class="notifications__item__option archive js-option">
+                    <i class="fas fa-folder"></i>
+                  </div>
+                  <div class="notifications__item__option delete js-option">
+                    <i class="fas fa-trash"></i>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="notifications__item">
+                <div class="notifications__item__avatar">
+                  <img src="image/char2.png" />
+                </div>
+          
+                <div class="notifications__item__content">
+                <!-- <div class="btns"> -->
+                    <div class="badge">13 | LV . 99</div>
+                    <!-- <div class="badge level">LV . 13</div> -->
+                <!-- </div> -->
+                  <span class="notifications__item__title">dkanrjsk</span>
+                  <span class="notifications__item__message">Mint-Choco</span>
+                </div>
+          
+                <div>
+                  <div class="notifications__item__option archive js-option">
+                    <i class="fas fa-folder"></i>
+                  </div>
+                  
+                  <div class="notifications__item__option delete js-option">
+                    <i class="fas fa-trash"></i>
+                  </div>
+                </div>
+              </div>
+          
+          
+              <div class="notifications__item">
+                <div class="notifications__item__avatar">
+                  <img src="image/char3.png" />
+                </div>
+          
+                <div class="notifications__item__content">
+                    <div class="badge">13 | LV . 99</div>
+                  <span class="notifications__item__title">Chim123</span>
+                  <span class="notifications__item__message">Hawaiian pizza</span>
+                </div>
+          
+                <div>
+                  <div class="notifications__item__option archive js-option">
+                    <i class="fas fa-folder"></i>
+                  </div>
+                  <div class="notifications__item__option delete js-option">
+                    <i class="fas fa-trash"></i>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="notifications__item">
+                <div class="notifications__item__avatar">
+                  <img src="image/char4.png" />
+                </div>
+          
+                <div class="notifications__item__content">
+                    <div class="badge">13 | LV . 99</div>
+                  <span class="notifications__item__title">__Ka__</span>
+                  <span class="notifications__item__message">Hawaiian pizza</span>
+                </div>
+          
+                <div>
+                  <div class="notifications__item__option archive js-option">
+                    <i class="fas fa-folder"></i>
+                  </div>
+                  <div class="notifications__item__option delete js-option">
+                    <i class="fas fa-trash"></i>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="notifications__item">
+                <div class="notifications__item__avatar">
+                  <img src="image/char2.png" />
+                </div>
+          
+                <div class="notifications__item__content">
+                    <div class="badge">13 | LV . 99</div>
+                  <span class="notifications__item__title">Blueberry_8</span>
+                  <span class="notifications__item__message">Mint-Choco</span>
+                </div>
+          
+                <div>
+                  <div class="notifications__item__option archive js-option">
+                    <i class="fas fa-folder"></i>
+                  </div>
+                  <div class="notifications__item__option delete js-option">
+                    <i class="fas fa-trash"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        <!--  item1 클래스를 따로 지정해야하나? -->
+
+        <!-- <div class="item item2">Victory!</div>
+        <div class="item item3">
+            <div class="score"><h2>+ 325exp</h2></div>
+            <div class="score"style="color:#fff;">Q1 : 4점 / Q2 : 5점 / Q3 : 6점 / Q4 : 2점 / Q5 : 3점</div>
+            <a href="#" class="btn">Friend Result</a>
+        </div>
+
+        <div class="item item4"> -->
+
+            
+        <!-- <div class="item item5">
+            5
+        </div> -->
+    </div>
+    <script>
+        (function(){
+
+/*
+* Get all the buttons actions
+*/
+let optionBtns = document.querySelectorAll( '.js-option' );
+
+for(var i = 0; i < optionBtns.length; i++ ) {
+
+  /*
+  * When click to a button
+  */
+  optionBtns[i].addEventListener( 'click', function ( e ){
+
+    var notificationCard = this.parentNode.parentNode;
+    var clickBtn = this;
+    /*
+    * Execute the delete or Archive animation
+    */
+    requestAnimationFrame( function(){ 
+
+      archiveOrDelete( clickBtn, notificationCard );
+
+      /*
+      * Add transition
+      * That smoothly remove the blank space
+      * Leaves by the deleted notification card
+      */
+      window.setTimeout( function( ){
+        requestAnimationFrame( function() {
+          notificationCard.style.transition = 'all .4s ease';
+          notificationCard.style.height = 0;
+          notificationCard.style.margin = 0;
+          notificationCard.style.padding = 0;
+        });
+
+        /*
+        * Delete definitely the animation card
+        */
+        window.setTimeout( function( ){
+          notificationCard.parentNode.removeChild( notificationCard );
+        }, 1500 );
+      }, 1500 );
+    });
+  })
+}
+
+/*
+* Function that adds
+* delete or archive class
+* To a notification card
+*/
+var archiveOrDelete = function( clickBtn, notificationCard ){
+  if( clickBtn.classList.contains( 'archive' ) ){
+    notificationCard.classList.add( 'archive' );
+  } else if( clickBtn.classList.contains( 'delete' ) ){
+    notificationCard.classList.add( 'delete' );
+  }
+}
+
+})()
+    </script>
+    
+</body>
+
+</html>

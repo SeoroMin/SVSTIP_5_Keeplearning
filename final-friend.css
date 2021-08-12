@@ -1,0 +1,374 @@
+
+/* 사용하는 색상들
+
+rgb(182, 236, 31) #연두
+rgb(133, 49, 182) #보라
+rgb(255, 242, 59) #노랑
+rgb(255, 61, 120) #핑크
+rgba(133, 49, 182, 0.5) #테두리 선(보라색) */
+
+body, html{
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 100%;
+    font-size: 10px;
+    background: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* -------- 네비게이션 바 영역----------- */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #263343; */
+    padding: 0.8rem 1.2rem;
+    
+}
+
+.navbar_logo {
+    font-size: 2.4rem;
+    color: white;
+}
+
+.navbar_logo i {
+    color: rgb(182, 236, 31);
+}
+
+.navbar_menu {
+    font-size: 2rem;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_menu li {
+    padding: 0.8rem 1.2rem;
+}
+
+.navbar_info a {
+    font-size: 2.4rem;
+    display: flex;
+    list-style: none;
+    color: rgb(182, 236, 31);
+}
+
+.navbar_info li {
+    list-style: none;
+    padding: 0.8rem 1.2rem;
+}
+
+.navbar_toggle{
+    display: none;
+    position: absolute;
+    right: 3.2rem;
+    font-size: 2.4rem;
+    color: rgb(182, 236, 31);
+}
+
+
+/* ------ 레이아웃 설정----- */
+
+
+
+
+/* -------- 컨테이너 영역----------- */
+
+.container {
+    color: rgb(133, 49, 182);
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    height: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  background-color: #c9463d;
+  color: black;
+}
+
+.wrapper {
+  width: 480px;
+  margin: 50px auto;
+}
+
+
+.notifications__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 105px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px 0px rgb( 0, 0, 0, .2 );
+
+  transition: all .3s ease-in;
+  cursor: pointer;
+}
+
+.notifications__item__avatar {
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  margin-right: 20px;
+
+  border-radius: 50%;
+}
+
+.notifications__item__avatar img {
+    position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.notifications__item__content { width: calc( 100% - 105px ); }
+.notifications__item__title,
+.notifications__item__message { display: block; }
+
+.notifications__item__title {
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.notifications__item__message {
+  /* font-family: Roboto, sans-serif; */
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(255, 61, 120);
+}
+
+.notifications__item__option {
+  width: 20px;
+  height: 20px;
+  margin: 8px 0;
+
+  border-radius: 50%;
+  color: white;
+  opacity: 0;
+
+  font-size: 10px;
+  text-align: center;
+  line-height: 20px;
+
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.notifications__item__option.archive { background-color: #3dc98c; }
+
+.notifications__item__option.delete { background-color: #c93d4d; }
+
+
+
+/* =========================================== */
+
+.notifications__item:hover {
+    background-color: #feffcb;
+    transform: scale( 0.95 );
+    box-shadow: 0px 5px 10px 0px rgb( 0, 0, 0, .2 );
+  }
+  
+  .notifications__item:hover .notifications__item__option { opacity: 1; }
+  
+  .notifications__item.archive .notifications__item__title,
+  .notifications__item.delete .notifications__item__title {
+    color: white;
+  }
+  
+  .notifications__item.archive .notifications__item__message,
+  .notifications__item.delete .notifications__item__message {
+    color: #f3f3f3;
+  }
+  
+  .notifications__item.archive {
+    background-color: #3dc98c;
+    animation: archiveAnimation 1.5s cubic-bezier(0, 0, 0, 1.12) forwards;
+    animation-delay: .6s;
+  }
+  
+  .notifications__item.delete {
+    background-color: #c93d4d;
+    animation: deleteAnimation 1.5s cubic-bezier(0, 0, 0, 1.12) forwards;
+    animation-delay: .6s;
+  }
+  
+  
+  @keyframes archiveAnimation{
+    to {
+      transform: translateX( 100px );
+      opacity: 0;
+    }
+  }
+  
+  @keyframes deleteAnimation{
+    to {
+      transform: translateX( -100px );
+      opacity: 0;
+    }
+  }
+
+
+  /* =================================== */
+
+/* -------------------- Tablet ---------------- */
+@media screen and (max-width : 786px) {
+
+
+    /* Navbar */
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.8rem 2.4rem;
+    }
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .navbar_menu li {
+        width: 100%;
+        text-align: center;
+    }
+    .navbar_menu li:hover{
+    background-color: rgb(133, 49, 182);
+    border-radius: 0.4rem;
+    }
+    .navbar_info {
+        display: none;
+        width: 100%;
+        padding-left: 0;
+        justify-content: center;
+    }
+    .navbar_toggle {
+        display: block;
+    }
+
+    .navbar_menu.active,
+    .navbar_info.active {
+        display: flex;
+    }
+
+    /* .subtitle strong {
+        font-size: 2rem;
+        line-height: 4rem;
+        padding: 0px 10px;
+    }
+
+    .subtitle p{
+        font-size: 1rem;
+    }
+
+    .btn{
+        width: 180px;
+        height: 4.4rem;
+    } */
+
+
+
+    
+
+}
+
+/* -------------------- Mobile ---------------- */
+@media screen and (max-width : 500px) {
+
+    /* Container */
+
+    /* .container{ */
+        /* display: flex; */
+        /* background: #fffae0; */
+        /* height: 100%; */
+        /* width: 100%;
+        flex-direction: column; */
+        /* justify-content: flex-start; */
+        /* align-items: center;
+        flex-wrap: nowrap; */
+        /* align-content: center; */
+    /* } */
+    /* .cont1, .cont2 {
+        width: 100%;
+        background: #fffae0;
+
+    } */
+    .navbar {
+        position: sticky;
+  top: 0;
+  opacity: 1;
+  backdrop-filter: blur(3rem);
+    }
+    /* .item4 {
+        height: 80vh;
+    } */
+}
+
+
+/* 기존 css */
+
+div.search-bar
+{
+  position: relative;
+  margin-top: 15px;
+  text-align: center;
+  z-index: 1;
+}
+
+div.search-bar .ip-search
+{
+  width: 85%;
+  border: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.25);
+  border-radius: 50px;
+  box-shadow: inset 0 25px 25px -15px rgba(60,51,176,0.15);
+}
+
+div.search-bar .ip-search::placeholder
+{
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+/* div.search-bar i.fa
+{
+  position: absolute;
+  right: 0;
+  margin-right: 25px;
+  margin-top: 14px;
+  color: rgba(255,255,255,0.8);
+  font-size: 12px;
+} */

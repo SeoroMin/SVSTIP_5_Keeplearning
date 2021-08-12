@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../static/css/rank.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9279b2b68a.js"></script>
+    <!-- JS 연결 -->
+    <script src="./../static/JS/base.js" defer></script>
+    <title>Readdie</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&display=swap');
+
+        .thumb {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            /* border: 2px solid rgba(255, 255, 255, 0.8); */
+
+        }
+        .greets {
+            font-size: 2rem;
+            padding: 8px 22px 10px 22px;
+            font-weight: 500;
+            color: rgb(255, 255, 255);
+            background-color: rgba(175, 78, 255, 0.8);
+            display: inline-block;
+            border-radius: 10px;
+            border: 3px solid rgba(133, 49, 182, 0.5);
+            box-sizing: border-box;
+        }
+        .thumb-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .list {
+            padding-left: 0;
+            background-color: rgba(255, 255, 255, 0);
+            /* margin-top: 48px; */
+        }
+
+        .list .item {
+
+            font-weight: 500;
+            /* width: 100%; */
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.808);
+            display: flex;
+            /* flex-basis: 33%; */
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+           
+
+        }
+
+        .list .item .left {
+            display: flex;
+            align-items: center;
+        }
+
+        .list .item .left .name {
+            margin-left: 6px;
+        }
+
+        /* .list .item .right {
+            opacity: 0.5;
+        } */
+
+        .list .item i {
+            padding: 20px 22px;
+        }
+
+        .right {
+            color: rgb(255, 242, 59);
+        }
+
+        .list .item .right i {
+            padding-right: 14px;
+        }
+
+        .greet {
+            padding: 4px 12px 4px 12px;
+            font-weight: 500;
+            color: rgb(133, 49, 182);
+            background-color: rgb(255, 242, 59);
+            display: inline-block;
+            border-radius: 1.5rem;
+            border: 3px solid rgba(133, 49, 182, 0.5);
+            box-sizing: border-box;
+        }
+
+        .fa-medal {
+            font-size: 5rem;
+        }
+
+        .greets strong{
+            color: rgb(255, 242, 59);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- NavBar(공통) -->
+    <nav class="navbar">
+        <!-- 로고 이미지, 텍스트 -->
+        <div class="navbar_logo">
+            <i class="fas fa-user-edit"></i>
+            <a href="#">Readdie</a>
+        </div>
+        <!-- 메뉴 -->
+        <ul class="navbar_menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Page</a></li>
+            <li><a href="#">Ranking</a></li>
+            <li><a href="#">Friends</a></li>
+            <li><a href="#">Etc.</a></li>
+        </ul>
+
+        <ul class="navbar_info">
+            <!-- 로그인, 회원가입 창 만들게 되면 활성화 시킬 것
+            <li><a href="">sign up</a></li>
+            <li><a href="">sign in</a></li> -->
+
+            <!-- MY PAGE -->
+            <li><a href="#"><i class="fas fa-user-circle"></i></a></li>
+        </ul>
+
+        <a href="#" class="navbar_toggle">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+
+
+    <!-- ------------------------------------------------------------------------=================------------ -->
+
+
+
+
+
+
+
+
+    <!-- Container(루트 컨테이너 flex 사용) -->
+    <div class="container">
+
+        <!-- 로고 영역 -->
+        <div class="cont1 item">
+            <div class="greets">
+                <strong>ChimChim</strong> is Top <strong>91%</strong>
+            </div>
+        </div>
+        <!-- 소제목 컨테이너 -->
+        <div class="cont2 item join">
+            <img style="width: 30rem; height: 30rem;" src="./../static/img/purple.png" alt="">
+            <!-- 피라미드 사진 부분 -->
+            
+                
+            
+            </div>
+            <!-- 상위 랭커 보여준는 영역-->
+            <div class="cont3 item mode">
+                <!-- 2등 -->
+                <div class="battle_mode item">
+                    <ul class="list">
+                        <li class="item">
+                            <div class="left">
+                                <i class="fas fa-medal third" style="color: silver;"></i>
+                            </div>
+                            <div class="thumb-wrapper ">
+                                <img class="thumb" src="./../static/img/KakaoTalk_20210514_135302697.jpg" alt="">
+                            </div>
+                            <div class="name greet">Lv.99</div>
+                            <div class="right">
+                                TATA
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 1등 -->
+                <div class="prac_mode item">
+                    <ul class="list">
+                        <li class="item">
+                            <!-- 메달 이미지 -->
+                            <div class="left">
+                                <i class="fas fa-medal third" style="color: gold;"></i>
+                            </div>
+                            <!-- 프로필 사진 -->
+                            <div class="thumb-wrapper ">
+                                <img class="thumb" src="./../static/img/KakaoTalk_20210514_135302697.jpg" alt="">
+                            </div>
+                            <!-- 레벨 -->
+                            <div class="name greet">Lv.99</div>
+                            <!-- 닉네임 -->
+                            <div class="right">
+                                KOYA
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 3등 -->
+                <div class="prac_mode item">
+                    <ul class="list">
+                        <li class="item">
+                            <div class="left">
+                                <i class="fas fa-medal third" style="color: #eec160;"></i>
+                            </div>
+                            <div class="thumb-wrapper ">
+                                <img class="thumb" src="./../static/img/KakaoTalk_20210514_135302697.jpg" alt="">
+
+                            </div>
+                            <div class="name greet">Lv.99</div>
+                            <div class="right">
+                                SHOOKY
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 하단 메뉴 영역 -->
+
+        </div>
+
+
+
+
+    </div>
+
+
+    </div>
+    </div>
+
+
+    <!-- type.js -->
+
+</body>
+
+</html>

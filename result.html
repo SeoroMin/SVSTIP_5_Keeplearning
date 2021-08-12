@@ -33,6 +33,12 @@
     width: 500px;
     height: 450px;
 }
+.box2 {
+    box-sizing: border-box;
+    width: 1000px;
+    height: 450px;
+    text-align: center;
+}
 .wrap {
   height: 100%;
   display: flex;
@@ -99,117 +105,6 @@
 
 </style>
 
-<style type="text/css"> 
-     body{ 
-         text-align: center; 
-         display: block; 
-         margin: 0 auto; 
-         font-size: 16px; 
-         color: #999; 
-     } 
-     h1{ 
-         font-family: 'Oswald', sans-serif; 
-         font-size: 30px; 
-         color: #216182; 
-     } 
-     label { 
-         display: block; 
-         margin-top: 20px; 
-         letter-spacing: 2px; 
-     } 
-     form { 
-         margin: 0 auto; 
-         width: 459px; 
-     } 
-     input, textarea { 
-         width: 439px; 
-         height: 27px; 
-         background-color: #efefef; 
-         border-radius: 6px; 
-         border: 1px solid #dedede; 
-         padding: 10px; 
-         margin-top: 3px; 
-         font-size: 0.9em; 
-         color: #3a3a3a; 
-     } 
-         input:focus, textarea:focus{ 
-             border: 1px solid #97d6eb; 
-         } 
-     
-     textarea{ 
-         height: 60px; 
-         background-color: #efefef; 
-     } 
-     #submit{ 
-         width: 127px; 
-         height: 48px; 
-         text-align: center; 
-         border: none; 
-         margin-top: 20px; 
-         cursor: pointer; 
-     } 
-     #submit:hover{ 
-         color: #fff; 
-         background-color: #216282; 
-         opacity: 0.9; 
-     } 
-     #cancel { 
-         width: 127px; height: 48px; 
-         text-align: center; 
-         border: none; 
-         margin-top: 20px; 
-         cursor: pointer; 
-     } 
-     #cancel:hover{ 
-         color: #fff; 
-         background-color: #216282; 
-         opacity: 0.9; 
-     }
-
-    .modal { 
-         position: fixed; 
-         left: 0; 
-         top: 0; 
-         width: 100%; 
-         height: 100%; 
-         background-color: rgba(0, 0, 0, 0.5); 
-         opacity: 0; 
-         visibility: hidden; 
-         transform: scale(1.1); 
-         transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; 
-     } 
-     .modal-content { 
-         position: absolute; 
-         top: 50%; 
-         left: 50%; 
-         transform: translate(-50%, -50%); 
-         background-color: white; 
-         padding: 1rem 1.5rem; 
-         width: 500px; 
-         height: 350px; 
-         border-radius: 0.5rem; 
-     } 
-     .close-button { 
-         float: right; 
-         width: 1.5rem; 
-         line-height: 1.5rem; 
-         text-align: center; 
-         cursor: pointer; 
-         border-radius: 0.25rem; 
-         background-color: lightgray; 
-     } 
-     .close-button:hover { 
-         background-color: darkgray; 
-     } 
-     .show-modal { 
-         opacity: 1; 
-         visibility: visible; 
-         transform: scale(1.0); 
-         transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; 
-     } 
-    
-</style>
-
 
 </head>
 
@@ -265,14 +160,41 @@
     </div>
   </nav>
 
+
+
+
 <!-- content -->
   <section class="about">
     <div class="container">
       <h2>Result</h2>
       <br>
+
       <!-- 뉴스 1 -->
       <div class="row">
       <div class="col-md-6">
+        <div class="box2">
+          <div class="col">
+            <br>
+            <h4>
+            <h4 style="border-left: 10px solid #282828; padding: 0.1em; margin:0px 0px 0px 0px;border-bottom: 2px solid #282828; ">Victory!</h4>
+            <br>
+            <p><span style="border-radius: 15px 15px 15px 0; border: 3px solid #FFAD5B; padding: 0.5em 0.6em; color: #FF8000;">+ 325exp</span></p>
+            <br>
+            <p><span style="border-radius: 15px 15px 15px 0; border: 3px solid #FFAD5B; padding: 0.5em 0.6em; color: #FF8000;">Q1 4점 Q2 5점 Q3 6점 Q4 2점 Q5 3점</span></p>
+            <br>
+            <div class="wrap">
+              <div class="in">
+              <button type="button" class="button" onClick="location.href='news_2.html'">view Friend results</button>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 뉴스 1 -->
+    <div class="row">
+    <div class="col-md-6">
         <div class="box">
           <div class="col">
             <br>
@@ -283,7 +205,7 @@
             <br>
             <div class="wrap">
               <div class="in">
-              <button type="button" class="button" onClick="location.href='news_2.html'">Hint</button>
+              <button type="button" class="button" onClick="location.href='http://www.yes24.com/Product/Goods/2152057'">connect book</button>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </div>
             </div>
@@ -296,16 +218,16 @@
           <div class="col">
             <br>
             <h4>
-            <h4 style="border-left: 10px solid #282828; padding: 0.1em; margin:0px 0px 0px 0px;border-bottom: 2px solid #282828; ">Q1</h4>
+            <h4 style="border-left: 10px solid #282828; padding: 0.1em; margin:0px 0px 0px 0px;border-bottom: 2px solid #282828; ">A1</h4>
             <br>
-            <p>그의 모험 섞인 삶, 그리고 대중적인 이미지가 후대에 영향을 미치는 동안 그의 실속 있고 절제된 방식은 20세기 소설에 강한 영향을 미쳤다. 헤밍웨이는 그의 대다수의 작품을 1920년대 중반부터 1950년대 중반 사이에 발표하였고, 1954년에 노벨 문학상을 수상하였다. 그는 소설 7개, 단편소설 모음집 6개, 그리고 비소설 작품 2개를 출판하였다. 소설 3개, 단편소설 모음집 4개, 그리고 비소설 작품 3개는 죽은 뒤에 출판되었다. 그의 대다수의 작품들은 미국 문학의 고전으로 여겨지고 있다.</p>
+            <p>기존 정답 : 노벨 문학상을 수상한 해밍웨이의 영향으로 미국 문학이 발전되었다.</p>
             <br>
-            <div class="wrap">
-              <div class="in">
-              <button type="button" class="button" onClick="location.href='news_2.html'">Hint</button>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </div>
-            </div>
+            <p>제출된 답 : 해밍웨이는 여러 소설들을 출판하며, 노벨 문학상을 수상하였다.</p>
+            <br>
+            <p>핵심 문장 : 그의 실속 있고 절제된 방식은 20세기 소설에 강한 영향을 미쳤다.</p>
+            <p>핵심 키워드 : 헤밍웨이, 작품, 영향</p>
+            <p>점수 : 4/10</p>
+           
           </div>
         </div>
       </div>
@@ -313,6 +235,7 @@
     </div>
   </div>
     <br>
+
     <!-- 뉴스 2 -->
     <div class="container">
       <!-- 뉴스 1 -->
@@ -326,9 +249,10 @@
             <br>
             <p>조지 벡시(, 1939년 7월 4일 - )는 뉴욕 타임스의 스포츠 칼럼니스트이자 비소설 저자이다. 그는 뉴욕 포스트의 스포츠 칼럼니스트 피터 벡시의 형이다. 벡시는 스포츠에서의 그의 일로 제일 잘 알려져 있으나, 스포츠가 아닌 인물에 관해 공동 집필한 몇몇 자서전이 있다.</p>
             <br>
+            
             <div class="wrap">
               <div class="in">
-              <button type="button" class="button" onClick="location.href='news_1.html'">Hint</button>
+              <button type="button" class="button" onClick="location.href='news_1.html'">connect book</button>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </div>
             </div>
@@ -341,16 +265,15 @@
           <div class="col">
             <br>
             <h4>
-            <h4 style="border-left: 10px solid #282828; padding: 0.1em; margin:0px 0px 0px 0px;border-bottom: 2px solid #282828; ">Q2</h4>
+            <h4 style="border-left: 10px solid #282828; padding: 0.1em; margin:0px 0px 0px 0px;border-bottom: 2px solid #282828; ">A2</h4>
             <br>
-            <p>조지 벡시(, 1939년 7월 4일 - )는 뉴욕 타임스의 스포츠 칼럼니스트이자 비소설 저자이다. 그는 뉴욕 포스트의 스포츠 칼럼니스트 피터 벡시의 형이다. 벡시는 스포츠에서의 그의 일로 제일 잘 알려져 있으나, 스포츠가 아닌 인물에 관해 공동 집필한 몇몇 자서전이 있다.</p>
+            <p>기존 정답 : 조지 벡시는 뉴욕 타임스의 스포츠 칼럼니스트이자 비소설 저자이다.</p>
             <br>
-            <div class="wrap">
-              <div class="in">
-              <button type="button" class="button" onClick="location.href='news_1.html'">Hint</button>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </div>
-            </div>
+            <p>제출된 답 : 조지 벡시는 유명한 사람이다.</p>
+            <p>핵심 문장 : 조지 벡시는 뉴욕 타임스의 스포츠 칼럼니스트이다.</p>
+            <p>핵심 키워드 : 조지 벡시, 뉴욕 타임스, 칼람니스트</p>
+            <p>총 점수 : 5/10</p>
+  
           </div>
         </div>
       </div>
@@ -361,90 +284,15 @@
   <br>
 
   <div class="container">
-      <!-- 뉴스 1 -->
-      <div class="row">
-      <div class="col-md-6">
-        <div class="box">
-          <div class="col">
-            <br>
-            <h4>
-            <h4 style="border-left: 10px solid #282828; padding: 0.1em; margin:0px 0px 0px 0px;border-bottom: 2px solid #282828; ">Answer</h4>
-            <br>
-            <!-- form action="form_ok_php" method="POST" -->
-            <input id="input1" type="text" placeholder="enter the text!">
-            <input id="input2" type="submit">
-            <p>조지 벡시(, 1939년 7월 4일 - )는 뉴욕 타임스의 스포츠 칼럼니스트이자 비소설 저자이다. 그는 뉴욕 포스트의 스포츠 칼럼니스트 피터 벡시의 형이다. 벡시는 스포츠에서의 그의 일로 제일 잘 알려져 있으나, 스포츠가 아닌 인물에 관해 공동 집필한 몇몇 자서전이 있다.</p>
-            <br>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="box">
-          <div class="col">
-            <br>
-            <h4>
-            <h4 style="border-left: 10px solid #282828; padding: 0.1em; margin:0px 0px 0px 0px;border-bottom: 2px solid #282828; ">Answer</h4>
-            <br>
-            <!-- form action="form_ok_php" method="POST" -->
-            <input id="input3" type="text" placeholder="enter the text!">
-            <!-- input id="input4" type="submit" -->
-            <button class="trigger">submit</button>
-            <p>조지 벡시(, 1939년 7월 4일 - )는 뉴욕 타임스의 스포츠 칼럼니스트이자 비소설 저자이다. 그는 뉴욕 포스트의 스포츠 칼럼니스트 피터 벡시의 형이다. 벡시는 스포츠에서의 그의 일로 제일 잘 알려져 있으나, 스포츠가 아닌 인물에 관해 공동 집필한 몇몇 자서전이 있다.</p>
-            <br>
-          </div>
-        </div>
-      </div>
-
-    </div>
+      
   </div>
 
   </div>
   </section>
   
 
-  <!-- 팝업 될 레이어 --> 
-     <div class="modal"> 
-         <div class="modal-content"> 
-             <span class="close-button">&times;</span> 
-             <h1 class="title">메일 보내기</h1> 
-             <form action="#post.php" method="POST"> 
-               <label for="email">Email</label> 
-               <input type="email" name="email" placeholder="Your email" required="required"> 
-               <label></label> 
-               <textarea name="message" placeholder="Test Message" required="required"></textarea> 
-               <input type="button" id="cancel" value="취소"> 
-               <input type="submit" id="submit" value="보내기"> 
-             </form>
-         </div> 
-     </div>
-     
-     <script type="text/javascript"> 
-         var modal = document.querySelector(".modal"); 
-         var trigger = document.querySelector(".trigger"); 
-         var closeButton = document.querySelector(".close-button"); 
-         var cancelButton = document.querySelector("#cancel");
-
-        //console.log(modal);
-
-        function toggleModal() { 
-             modal.classList.toggle("show-modal"); 
-         }
-
-        function windowOnClick(event) { 
-             if (event.target === modal) { 
-                 toggleModal(); 
-             } 
-         }
-
-        trigger.addEventListener("click", toggleModal); 
-         closeButton.addEventListener("click", toggleModal); 
-         cancel.addEventListener("click", toggleModal); 
-         window.addEventListener("click", windowOnClick); 
-     </script>
- 
-   
-
+  
+    
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
